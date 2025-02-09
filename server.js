@@ -6,7 +6,7 @@ app.use(express.json());  // Middleware to parse JSON request body
 
 // Creating a route to handle GET requests to the root URL
 app.post('/', (req, res) => {
-    const acceptHeader = req.accept('accept');
+    const acceptHeader = req.get('accept');
     
     const responseBody = {
         acceptHeader: acceptHeader,
